@@ -1,14 +1,14 @@
 import { Injectable } from "@angular/core";
-import { Product } from "./product.model";
+import { User } from "./user.model";
 import { Observable } from "rxjs/Observable";
 import "rxjs/add/observable/from";
 
 @Injectable()
 export class StaticDataSource {
-	private products: Product[] = [];
+	private users: User[] = [];
 
-	getProducts(): Observable<Product[]> {
-		return Observable.from([this.products]);
+	getUsers(): Observable<User[]> {
+		return Observable.from([this.users]);
 	}
 }
 
